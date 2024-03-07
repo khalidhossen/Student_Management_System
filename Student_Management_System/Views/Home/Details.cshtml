@@ -1,0 +1,49 @@
+﻿@model Student_Management_System.Models.Enrollment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Enrollment</h4>
+    <hr />
+    <div style="display:flex">
+        <div style="flex: 0 0 auto; margin-right: 20px;">
+            
+                <img src="@Url.Content(Model.Student.ImagePath)" height="200" ,width="150" />
+            
+
+        </div>
+        <div>
+            <table class="table table-bordered">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Student.StudentId)</th>
+                    <th>@Html.DisplayNameFor(model => model.Student.Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.Student.Email)</th>
+                    <th> @Html.DisplayNameFor(model => model.Course.CourseTitle)</th>
+                    <th>@Html.DisplayNameFor(model => model.Course.CourseId)</th>
+                    <th>@Html.DisplayNameFor(model => model.Course.Description)</th>
+                    <th>@Html.DisplayNameFor(model => model.EnrollmentId)</th>
+                    <th>@Html.DisplayNameFor(model => model.EnrollmentDate)</th>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayFor(model => model.Student.StudentId)</td>
+                    <td>@Html.DisplayFor(model => model.Student.Name)</td>
+                    <td>@Html.DisplayFor(model => model.Student.Email)</td>
+                    <td>@Html.DisplayFor(model => model.Course.CourseTitle)</td>
+                    <td>@Html.DisplayFor(model => model.Course.CourseId)</td>
+                    <td>@Html.DisplayFor(model => model.Course.Description)</td>
+                    <td> @Html.DisplayFor(model => model.EnrollmentId)</td>
+                    <td>@Html.DisplayFor(model => model.EnrollmentDate)</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
